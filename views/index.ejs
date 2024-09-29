@@ -1,0 +1,14 @@
+<head>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Projects</h1>
+        <ul>
+            <% projects.forEach(function(project) { %>
+                <li><a href="/projects/<%= project._id %>"><%= project.name %></a></li>
+            <% }) %>
+        </ul>
+        <a href="/projects/new" class="button">Create New Project</a>
+    </div>
+</body>

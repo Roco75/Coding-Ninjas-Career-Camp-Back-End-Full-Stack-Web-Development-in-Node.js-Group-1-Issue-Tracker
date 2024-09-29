@@ -1,0 +1,17 @@
+<head>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Create New Project</h1>
+        <form action="/projects" method="POST">
+            <label for="name">Project Name:</label>
+            <input type="text" name="name" required>
+            <label for="description">Description:</label>
+            <textarea name="description" required></textarea>
+            <label for="author">Author:</label>
+            <input type="text" name="author" required>
+            <button type="submit">Create Project</button>
+        </form>
+    </div>
+</body>

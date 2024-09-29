@@ -1,0 +1,25 @@
+<head>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1><%= project.name %></h1>
+        <p><%= project.description %></p>
+
+        <form action="/projects/<%= project._id %>/filter" method="GET" class="filter-form">
+            <label for="labels">Filter by labels:</label>
+            <input type="text" name="labels">
+            <label for="author">Filter by author:</label>
+            <input type="text" name="author">
+            <button type="submit">Filter</button>
+        </form>
+
+        <ul class="issue-list">
+            <% issues.forEach(function(issue) { %>
+                <li><strong><%= issue.title %></strong>: <%= issue.description %> - <%= issue.author %></li>
+            <% }) %>
+        </ul>
+
+        <a href="/projects/<%= project._id %>/issues/new" class="button new-issue-link">Create New Issue</a>
+    </div>
+</body>
